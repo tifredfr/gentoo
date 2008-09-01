@@ -1,0 +1,66 @@
+diff -Naur vmnet-only/bridge.c vmnet-only-new/bridge.c
+--- vmnet-only/bridge.c	2008-05-16 08:59:28.000000000 +0300
++++ vmnet-only-new/bridge.c	2008-06-24 05:22:52.000000000 +0300
+@@ -275,7 +275,7 @@
+                         struct net_device *net)  // IN: Network device
+ {
+ #ifdef VMW_NETDEV_HAS_NET
+-   if (net->nd_net != bridge->internalDev->nd_net) {
++   if (dev_net(net) != dev_net(bridge->internalDev)) {
+       return 0;
+    }
+ #endif
+diff -Naur vmnet-only/Makefile vmnet-only-new/Makefile
+--- vmnet-only/Makefile	2008-07-21 11:32:12.000000000 +0300
++++ vmnet-only-new/Makefile	2008-05-16 10:20:00.000000000 +0300
+@@ -82,7 +82,7 @@
+ MAKEOVERRIDES := $(filter-out CC=%,$(MAKEOVERRIDES))
+ 
+ $(DRIVER_KO):
+-	make -C $(BUILD_DIR) M=$$PWD SRCROOT=$$PWD/$(SRCROOT) modules
++	make -C $(BUILD_DIR) SUBDIRS=$$PWD SRCROOT=$$PWD/$(SRCROOT) modules
+ 
+ else
+ 
+diff -Naur vmnet-only/procfs.c vmnet-only-new/procfs.c
+--- vmnet-only/procfs.c	2008-05-16 08:59:28.000000000 +0300
++++ vmnet-only-new/procfs.c	2008-06-24 05:24:47.000000000 +0300
+@@ -63,7 +63,7 @@
+ {
+    int retval;
+ 
+-   retval = VNetProc_MakeEntry(&proc_root, "vmnet", S_IFDIR, &base);
++   retval = VNetProc_MakeEntry(NULL, "vmnet", S_IFDIR, &base);
+    if (retval) {
+       return retval;
+    }
+@@ -95,7 +95,7 @@
+ void
+ VNetProc_Cleanup(void)
+ {
+-   VNetProc_RemoveEntry(base, &proc_root);
++   VNetProc_RemoveEntry(base, NULL);
+    base = NULL;
+ }
+ 
+diff -Naur vmnet-only/vmnetInt.h vmnet-only-new/vmnetInt.h
+--- vmnet-only/vmnetInt.h	2008-05-16 08:59:28.000000000 +0300
++++ vmnet-only-new/vmnetInt.h	2008-06-24 05:21:38.000000000 +0300
+@@ -63,7 +63,7 @@
+ #   define dev_lock_list()    read_lock(&dev_base_lock)
+ #   define dev_unlock_list()  read_unlock(&dev_base_lock)
+ #   ifdef VMW_NETDEV_HAS_NET
+-#      define DEV_GET(x)      __dev_get_by_name((x)->internalDev->nd_net, (x)->name)
++#      define DEV_GET(x)      __dev_get_by_name(dev_net((x)->internalDev), (x)->name)
+ #   else
+ #      define DEV_GET(x)      __dev_get_by_name((x)->name)
+ #   endif
+@@ -89,7 +89,7 @@
+ 
+ #ifdef VMW_NETDEV_HAS_NET
+ extern struct proto vmnet_proto;
+-#   define compat_sk_alloc(_bri, _pri) sk_alloc((_bri)->internalDev->nd_net, \
++#   define compat_sk_alloc(_bri, _pri) sk_alloc(dev_net((_bri)->internalDev), \
+                                                 PF_NETLINK, _pri, &vmnet_proto)
+ #elif defined(VMW_HAVE_SK_ALLOC_WITH_PROTO)
+ extern struct proto vmnet_proto;
