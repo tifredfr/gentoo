@@ -17,7 +17,7 @@ S="${WORKDIR}/xf86-video-intel-${PV}"
 
 DESCRIPTION="X.Org driver for Intel cards"
 
-KEYWORDS="~amd64 ~arm ~ia64 ~sh ~x86 ~x86-fbsd"
+KEYWORDS=""
 IUSE="dri"
 
 RDEPEND=">=x11-base/xorg-server-1.2
