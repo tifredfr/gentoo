@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.4.1-r1.ebuild,v 1.1 2008/08/19 11:49:30 remi Exp $
+# $Header: $
 
 # Must be before x-modular eclass is inherited
 # Enable snapshot to get the man page in the right place
@@ -34,17 +34,16 @@ DEPEND="${RDEPEND}
 			>=x11-libs/libdrm-2.2
 			x11-libs/libX11 )"
 
-CONFIGURE_OPTIONS="$(use_enable dri)"
-
 PATCHES=(
-"${FILESDIR}/${P}-0001-Fix-reverted-LVDS-bios-capability-dword-definition.patch"
-"${FILESDIR}/2.4.1/01_fix_compiz_video.diff"
-"${FILESDIR}/2.4.1/05_intel_exa_force_greedy.patch"
-"${FILESDIR}/2.4.1/11_textured_video_option.patch"
-"${FILESDIR}/2.4.1/20_thinkpad_g40_quirk.patch"
-"${FILESDIR}/2.4.1/21_quirk_lenovo.patch"
+"${FILESDIR}/2.4/01_fix_compiz_video.diff"
+"${FILESDIR}/2.4/05_intel_exa_force_greedy.patch"
+"${FILESDIR}/2.4/11_textured_video_option.patch"
+"${FILESDIR}/2.4/20_thinkpad_g40_quirk.patch"
+"${FILESDIR}/2.4/21_quirk_lenovo.patch"
 
 )
+
+CONFIGURE_OPTIONS="$(use_enable dri)"
 
 pkg_setup() {
 	if use dri && ! built_with_use x11-base/xorg-server dri; then
