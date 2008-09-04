@@ -42,11 +42,17 @@ src_unpack() {
 
 pkg_postinst() {
          elog 
-         elog " TAKE CARE : If an the error message : invalid module format"
-         elog " appears when you start vmware init.d script, you must modify"
-         elog " /etc/init.d/vmware and /etc/vmware/init.d/vmware by replacing"
-         elog " all occurences of 'modprobe -f' by 'modprobe -s'"
-         elog " This will be corrected soon in the vmware-workstation and"
-         elog " vmware-server ebuild. We apologize for the inconvenience"
-	 elog  
+         elog " Instruction: http://bugs.gentoo.org/attachment.cgi?id=162272"
+         elog " load the modules: modprobe vmblock && modprobe vmnet && modprobe vmmon"
+	 elog ""
+         elog " Run vmware-config.pl"
+         elog " "
+         elog " Edit /etc/init.d/vmware start and add"
+	 elog "       #! /bin/sh
+      sudo modprobe vmblock
+      sudo modprobe vmnet
+      sudo modprobe vmmon
+      sudo /etc/init.d/vmware start
+      VMWARE_USE_SHIPPED_GTK=force vmware
+"
 }
