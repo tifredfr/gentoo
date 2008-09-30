@@ -1,7 +1,7 @@
-Index: src/i810_video.c
+Index: xserver-xorg-video-intel-2.1.1/src/i810_video.c
 ===================================================================
---- src/i810_video.c	2007-10-12 13:38:10.000000000 +0100
-+++ src/i810_video.c	2007-10-12 13:38:39.000000000 +0100
+--- xserver-xorg-video-intel-2.1.1.orig/src/i810_video.c	2007-10-12 13:38:10.000000000 +0100
++++ xserver-xorg-video-intel-2.1.1/src/i810_video.c	2007-10-12 13:38:39.000000000 +0100
 @@ -1087,7 +1087,7 @@
      if(!REGION_EQUAL(pScrn->pScreen, &pPriv->clip, clipBoxes)) {
  	REGION_COPY(pScrn->pScreen, &pPriv->clip, clipBoxes);
@@ -20,10 +20,10 @@ Index: src/i810_video.c
  
      pPriv->isOn = TRUE;
      /* we've prempted the XvImage stream so set its free timer */
-Index: src/i830_video.c
+Index: xserver-xorg-video-intel-2.1.1/src/i830_video.c
 ===================================================================
---- src/i830_video.c	2007-10-12 13:38:10.000000000 +0100
-+++ src/i830_video.c	2007-10-12 13:39:03.000000000 +0100
+--- xserver-xorg-video-intel-2.1.1.orig/src/i830_video.c	2007-10-12 13:38:10.000000000 +0100
++++ xserver-xorg-video-intel-2.1.1/src/i830_video.c	2007-10-12 13:39:03.000000000 +0100
 @@ -2504,6 +2509,7 @@
  	if (!RegionsEqual(&pPriv->clip, clipBoxes)) {
  	    REGION_COPY(pScrn->pScreen, &pPriv->clip, clipBoxes);

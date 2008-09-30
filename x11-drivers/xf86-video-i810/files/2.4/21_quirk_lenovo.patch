@@ -1,6 +1,6 @@
-diff -Nurp src/i830_quirks.c src/i830_quirks.c
---- src/i830_quirks.c	2008-06-26 20:21:14.000000000 -0700
-+++ src/i830_quirks.c	2008-06-26 20:30:23.000000000 -0700
+diff -Nurp xserver-xorg-video-intel-2.3.2-1ubuntu2-patched/src/i830_quirks.c xserver-xorg-video-intel-2.3.2-1ubuntu2-working/src/i830_quirks.c
+--- xserver-xorg-video-intel-2.3.2-1ubuntu2-patched/src/i830_quirks.c	2008-06-26 20:21:14.000000000 -0700
++++ xserver-xorg-video-intel-2.3.2-1ubuntu2-working/src/i830_quirks.c	2008-06-26 20:30:23.000000000 -0700
 @@ -242,6 +242,8 @@ static i830_quirk i830_quirk_list[] = {
  
      /* Lenovo Napa TV (use dmi)*/
