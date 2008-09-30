@@ -37,7 +37,6 @@ DEPEND="${RDEPEND}
 PATCHES=(
 "${FILESDIR}/2.4/xf86-video-i810-2.4.2-fix-flicker.patch"
 "${FILESDIR}/2.4/01_fix_compiz_video.diff"
-"${FILESDIR}/2.4/01_gen_pci_ids.diff"
 "${FILESDIR}/2.4/05_intel_exa_force_greedy.patch"
 "${FILESDIR}/2.4/11_textured_video_option.patch"
 "${FILESDIR}/2.4/24_no_render_suspend"
