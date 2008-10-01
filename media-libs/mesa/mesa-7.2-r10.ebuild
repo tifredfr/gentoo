@@ -26,7 +26,7 @@ else
 fi
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd"
 IUSE_VIDEO_CARDS="
 	video_cards_i810
 	video_cards_mach64
