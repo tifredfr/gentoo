@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.30 2008/08/03 10:34:51 ulm Exp $
 
+  03 Oct 2008; <fred@gentoo.org> -grisbi-20080929.ebuild,
+  +grisbi-20081003.ebuild:
+  Upstream CVS
+
   03 Aug 2008; Ulrich Mueller <ulm@gentoo.org> metadata.xml:
   Add USE flag description to metadata wrt GLEP 56.
 
