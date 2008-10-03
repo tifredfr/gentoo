@@ -1,0 +1,8 @@
+# ChangeLog for media-plugins/elisa-plugins-bad
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Oct 2008; <thelinuxfr@free.fr> -elisa-plugins-bad-0.5.10.ebuild,
+  +elisa-plugins-bad-0.5.12.ebuild:
+  Version bump.
+

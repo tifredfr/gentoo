@@ -1,0 +1,8 @@
+# ChangeLog for media-plugins/elisa-plugins-good
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  03 Oct 2008; Frédéric Lietart <thelinuxfr@free.fr>
+  -elisa-plugins-good-0.5.10.ebuild, +elisa-plugins-good-0.5.12.ebuild:
+  Version bump.
+
