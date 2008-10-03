@@ -32,7 +32,7 @@ RDEPEND=">=dev-lang/python-2.5
 	>=media-plugins/gst-plugins-vorbis-0.10
 	>=media-plugins/gst-plugins-theora-0.10
 	media-plugins/libvisual-plugins:0.4
-	media-fonts/liberation-fonts-ttf
+	media-fonts/freefont-ttf
 	x11-misc/xdg-user-dirs
 	dev-python/pyxdg
 	dvd? (
