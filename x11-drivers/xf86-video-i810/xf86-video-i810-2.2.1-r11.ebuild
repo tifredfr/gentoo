@@ -52,8 +52,6 @@ epatch "${FILESDIR}/14_sysfs_fujitsu_backlight.patch"
 epatch "${FILESDIR}/15_quirk_sony_vaio_vgn-sz4mn.patch"
 epatch "${FILESDIR}/16_legacy_backlight_blc_pwn_ctl.patch"
 epatch "${FILESDIR}/17_lockup_virtual_size_2048.patch"
-#epatch "${FILESDIR}/18_quirks.patch"
-#epatch "${FILESDIR}/19_check_exa_pitch_to_fix_rotate_crash.patch"
 
 }
 
