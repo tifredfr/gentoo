@@ -1,0 +1,4 @@
+# Frédéric Lietart <thelinuxfr@free.fr> (06 Oct 2008)
+# No deps required in portage
+=x11-drivers/xf86-video-i810-2.4.97.0
+
