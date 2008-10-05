@@ -9,8 +9,7 @@ MY_P=${P/networkmanager/NetworkManager}
 
 DESCRIPTION="Network configuration and management in an easy way. Desktop environment independent."
 HOMEPAGE="http://www.gnome.org/projects/NetworkManager/"
-# Release candidate for 0.6.6, Hosted in dcbw's redhat space.
-SRC_URI="http://people.redhat.com/dcbw/NetworkManager/0.6.6/${MY_P}.tar.gz"
+SRC_URI="http://thelinux.googlecode.com/files/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
