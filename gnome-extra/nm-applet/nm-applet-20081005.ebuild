@@ -9,7 +9,7 @@ inherit gnome2 eutils
 DESCRIPTION="Gnome applet for NetworkManager."
 HOMEPAGE="http://people.redhat.com/dcbw/NetworkManager/"
 
-SRC_URI="http://people.redhat.com/dcbw/NetworkManager/0.6.6/${P}.tar.gz"
+SRC_URI="http://thelinux.googlecode.com/files/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
