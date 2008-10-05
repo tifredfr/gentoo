@@ -63,12 +63,7 @@ src_unpack () {
 	unpack ${A}
 	cd "${S}"
 
-	# Use the kernel headers
-	#epatch "${FILESDIR}/${PN}-use-kernel-headers.patch"
-	# Fix the resolv.conf permissions
-	#epatch "${FILESDIR}/${PN}-resolvconf-perms.patch"
-	# Fix up the dbus conf file to use plugdev group
-	#epatch "${FILESDIR}/${PN}-0.6.5-confchanges.patch"
+	epatch "${FILESDIR}/NetworkManager.conf.patch"
 }
 
 src_install() {
