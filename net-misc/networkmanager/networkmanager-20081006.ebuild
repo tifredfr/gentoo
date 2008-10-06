@@ -62,8 +62,13 @@ pkg_setup() {
 src_unpack () {
 	unpack ${A}
 	cd "${S}"
-
 	epatch "${FILESDIR}/NetworkManager.conf.patch"
+}
+
+src_compile(){
+	./autogen.sh || die "autogen failed"
+	econf || die "configure failed"
+	emake || die "make failed"
 }
 
 src_install() {
