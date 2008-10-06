@@ -2,15 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-# NOTE: The comments in this file are for instruction and documentation.
-# They're not meant to appear with your final, production ebuild.  Please
-# remember to remove them before submitting or committing your ebuild.  That
-# doesn't mean you can't add your own comments though.
-
-# The 'Header' on the third line should just be left alone.  When your ebuild
-# will be committed to cvs, the details on that line will be automatically
-# generated to contain the correct data.
-
 # The EAPI variable tells the ebuild format in use.
 # Defaults to 0 if not specified. The current PMS draft contains details on
 # a proposed EAPI=0 definition but is not finalized yet.
@@ -33,19 +24,11 @@ inherit eutils
 # eclasses tend to list descriptions of how to use their functions properly.
 # take a look at /usr/portage/eclasses/ for more examples.
 
-# Short one-line description of this package.
-DESCRIPTION="This is a sample skeleton ebuild file"
 
-# Homepage, not used by Portage directly but handy for developer reference
+DESCRIPTION="This is a sample skeleton ebuild file"
 HOMEPAGE="http://foo.bar.com/"
 
-# Point to any required sources; these will be automatically downloaded by
-# Portage.
 SRC_URI="ftp://foo.bar.com/${P}.tar.gz"
-
-# License of the package.  This must match the name of file(s) in
-# /usr/portage/licenses/.  For complex license combination see the developer
-# docs on gentoo.org for details.
 LICENSE=""
 
 # The SLOT variable is used to tell Portage if it's OK to keep multiple
@@ -107,6 +90,12 @@ RDEPEND="${DEPEND}"
 # If you don't need to change it, leave the S= line out of the ebuild
 # to keep it tidy.
 #S="${WORKDIR}/${P}"
+
+
+src_unpack() {
+	unpack "${A}"
+	epatch "${FILESDIR}/init.patch" || die "patch failed"
+}
 
 src_compile() {
 	# Most open-source packages use GNU autoconf for configuration.
