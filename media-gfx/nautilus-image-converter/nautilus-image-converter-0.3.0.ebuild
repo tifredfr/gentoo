@@ -36,3 +36,9 @@ src_install() {
 	emake DESTDIR="${D}" install || die "emake install failed"
 	dodoc AUTHORS ChangeLog CREDITS README
 }
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+	elog "Execute in terminal: killall nautilus"
+}
+
