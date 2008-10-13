@@ -35,6 +35,9 @@ RDEPEND=">=dev-lang/python-2.5
 	media-fonts/freefont-ttf
 	x11-misc/xdg-user-dirs
 	dev-python/pyxdg
+	dev-python/celementtree
+	dev-python/pysqlite
+	dev-python/pycairo
 	dvd? (
 		media-libs/libdvdcss
 		>=media-plugins/gst-plugins-ffmpeg-0.10
