@@ -30,5 +30,5 @@ src_install() {
 	doins capture.png
 	doins insert-image.svg
 
-	newbin ScreenStApp.py ScreenStApp
+	newbin ScreenStApp.py screenstapp
 }

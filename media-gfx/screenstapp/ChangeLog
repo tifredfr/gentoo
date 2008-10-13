@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  13 Oct 2008; Frédéric Lietart <thelinuxfr@free.fr>
+  -screenstapp-0.2.ebuild, +screenstapp-0.2-r1.ebuild:
+  Fix typo screenstapp
+
   09 Oct 2008; Frédéric Lietart <thelinuxfr@free.fr> ChangeLog:
   Initial Import
 
