@@ -25,7 +25,7 @@ RDEPEND=">=dev-lang/python-2.5
 	dev-python/pyopenssl
 	dev-python/pygtk
 	dev-python/gnome-python-extras
-	>=dev-python/pigment-python-0.3.5
+	>=dev-python/pigment-python-0.3.11
 	>=media-libs/gstreamer-0.10.4
 	>=dev-python/gst-python-0.10
 	>=media-plugins/gst-plugins-ogg-0.10

@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="-* ~amd64 ~ppc ~x86"
 IUSE=""
 
-RDEPEND=">=media-libs/pigment-0.3.7
+RDEPEND=">=media-libs/pigment-0.3.11
 	>=dev-libs/glib-2.8
 	>=dev-python/pygobject-2.8
 	>=media-libs/gstreamer-0.10
