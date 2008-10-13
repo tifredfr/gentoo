@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/ChangeLog,v 1.30 2008/08/03 10:34:51 ulm Exp $
 
+  13 Oct 2008; Frédéric Lietart <thelinuxfr@free.fr>
+  -grisbi-20081003.ebuild, +grisbi-20081013.ebuild:
+  Upstream CVS 0.6
+
   03 Oct 2008; <fred@gentoo.org> -grisbi-20080929.ebuild,
   +grisbi-20081003.ebuild:
   Upstream CVS
