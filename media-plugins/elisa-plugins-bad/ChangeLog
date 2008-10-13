@@ -3,6 +3,10 @@
 # $Header: $
 
   13 Oct 2008; Frédéric Lietart <thelinuxfr@free.fr>
+  -elisa-plugins-bad-0.5.13.ebuild, +elisa-plugins-bad-0.5.14.ebuild:
+  Version bump.
+
+  13 Oct 2008; Frédéric Lietart <thelinuxfr@free.fr>
   -elisa-plugins-bad-0.5.12.ebuild, +elisa-plugins-bad-0.5.13.ebuild:
   Upstream Release
 
