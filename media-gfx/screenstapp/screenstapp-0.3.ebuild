@@ -27,7 +27,6 @@ src_unpack() {
 src_install() {
 	insinto /usr/share/${PN}
 	doins ScreenStApp.glade
-	doins capture.png
 	doins insert-image.svg
 
 	newbin ScreenStApp.py screenstapp
