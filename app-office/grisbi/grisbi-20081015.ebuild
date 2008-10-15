@@ -35,7 +35,7 @@ pkg_setup() {
 	fi
 }
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${PN}-${PV}"
 
 src_unpack() {
 	unpack ${A}
@@ -53,7 +53,7 @@ src_unpack() {
 }
 
 src_compile() {
-	./autogen.sh
+	./autogen.sh || die "autogen.sh failed"
 	econf \
 		$(use_with ofx) \
 		$(use_enable nls) || die
@@ -66,6 +66,7 @@ src_install() {
 	dodoc AUTHORS ChangeLog NEWS README
 	insinto /usr/share/applications
 	doins "${FILESDIR}"/grisbi.desktop
+	newicon pixmaps/grisbi.png grisbi.png
 }
 
 pkg_postinst() {
