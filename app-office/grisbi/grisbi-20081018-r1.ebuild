@@ -8,7 +8,7 @@ IUSE="print nls ofx"
 
 DESCRIPTION="Grisbi is a personal accounting application for Linux"
 HOMEPAGE="http://www.grisbi.org"
-SRC_URI="http://thelinux.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://thelinux.googlecode.com/files/${P}-${PR}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
