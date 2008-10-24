@@ -49,7 +49,7 @@ RDEPEND="dev-python/dbus-python
 	png? ( >=media-plugins/gst-plugins-libpng-${GVER} )"
 DEPEND="nls? ( dev-util/intltool sys-devel/gettext )"
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${PN}-${PV}
 
 pkg_setup() {
 	if use ipod && ! built_with_use media-libs/libgpod python; then
@@ -64,7 +64,7 @@ pkg_setup() {
 }
 
 src_compile() {
-	emake mmkeys.so || die "emake mmkeys.so failed."
+	emake || die "make failed."
 
 	if use nls; then
 		emake translations || die "emake translations failed."
