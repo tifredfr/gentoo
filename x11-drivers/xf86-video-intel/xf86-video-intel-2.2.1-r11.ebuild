@@ -1,19 +1,10 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-i810/xf86-video-i810-2.2.1.ebuild,v 1.2 2008/03/15 02:16:33 dberkholz Exp $
+# $Header: $
 
-# Must be before x-modular eclass is inherited
-# Enable snapshot to get the man page in the right place
-# This should be fixed with a XDP patch later
 SNAPSHOT="yes"
-XDPVER=-1
 
 inherit x-modular
-
-# This really needs a pkgmove...
-SRC_URI="http://xorg.freedesktop.org/archive/individual/driver/xf86-video-intel-${PV}.tar.bz2"
-
-S="${WORKDIR}/xf86-video-intel-${PV}"
 
 DESCRIPTION="X.Org driver for Intel cards"
 
@@ -31,7 +22,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xproto
 	x11-proto/glproto
 	dri? ( x11-proto/xf86driproto
-			>=x11-libs/libdrm-2.2
+			=x11-libs/libdrm-2.3.0
 			x11-libs/libX11 )"
 src_unpack() {
 	unpack ${A}
