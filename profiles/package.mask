@@ -3,5 +3,9 @@
 =x11-drivers/xf86-video-i810-2.4.97.0
 
 =media-gfx/f-spot-0.5.0.1
-
 =app-office/glom-1.7.3
+
+
+# Mask by Frederic LIETART <thelinuxfr@free.fr> (28 Oct 2008)
+# Devel version
+=media-sound/exaile-20081023
