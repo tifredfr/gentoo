@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.33 2008/08/17 16:16:38 maekke Exp $
 
+  02 Nov 2008; Frédéric Lietart <thelinuxfr@free.fr>
+  +networkmanager-9999.ebuild:
+  Import ebuild from #235330
+
   04 Oct 2008; Frédéric Lietart <thelinuxfr@free.fr> ChangeLog:
   Upstream SVN version 7.0
 
