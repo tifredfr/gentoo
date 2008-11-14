@@ -28,13 +28,16 @@ DEPEND="${RDEPEND}
 CONFIGURE_OPTIONS="$(use_enable dri)"
 
 PATCHES=(
-"${FILESDIR}/2.4/xf86-video-i810-2.4.2-fix-flicker.patch"
-#"${FILESDIR}/2.4/xf86-video-i810-2.4.2-0001-Don-t-allocate-a-pipe-for-hotplug-detection.patch"
-"${FILESDIR}/2.4/01_fix_compiz_video.diff"
-"${FILESDIR}/2.4/05_intel_exa_force_greedy.patch"
-"${FILESDIR}/2.4/11_textured_video_option.patch"
-"${FILESDIR}/2.4/24_no_render_suspend"
-
+	"${FILESDIR}/2.4.1/01_gen_pci_ids.diff"
+	"${FILESDIR}/2.4.1/20_thinkpad_g40_quirk.patch"
+	"${FILESDIR}/2.4.1/21_quirk_lenovo.patch"
+	"${FILESDIR}/2.4.1/22_no_pipe_for_hotplug_detection.patch"
+	"${FILESDIR}/2.4.1/23_quirks_studiohybrid_eeepc_and_w251u.patch"
+	"${FILESDIR}/2.4.1/24_no_render_suspend"
+	"${FILESDIR}/2.4.1/25_quirk_nc6110.patch"
+	"${FILESDIR}/2.4.1/26_i830-use-lfp-data-ptrs.patch"
+	"${FILESDIR}/2.4.1/27_disable_fbc_on_965.patch"
+	"${FILESDIR}/2.4.1/28_stolen_memory_counting_g4x.patch"
 )
 
 
