@@ -29,6 +29,7 @@ CONFIGURE_OPTIONS="$(use_enable dri)"
 
 PATCHES=(
 	"${FILESDIR}/2.4.1/01_gen_pci_ids.diff"
+	"${FILESDIR}/2.4.1/11_textured_video_option.patch"
 	"${FILESDIR}/2.4.1/20_thinkpad_g40_quirk.patch"
 	"${FILESDIR}/2.4.1/21_quirk_lenovo.patch"
 	"${FILESDIR}/2.4.1/22_no_pipe_for_hotplug_detection.patch"
