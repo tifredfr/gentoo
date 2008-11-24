@@ -21,14 +21,14 @@ RDEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd "${S}"
-
-	sed -i \
-		-e 's/-Werror//' configure.ac \
-		-e 's/LDFLAGS="${LDFLAGS} -lofx"/LIBS="${LIBS} -lofx"/' \
-		configure.ac || die "sed failed"
-
-	eautoconf
+#	cd "${S}"
+#
+#	sed -i \
+#		-e 's/-Werror//' configure.ac \
+#		-e 's/LDFLAGS="${LDFLAGS} -lofx"/LIBS="${LIBS} -lofx"/' \
+#		configure.ac || die "sed failed"
+#
+#	eautoconf
 }
 
 src_compile() {
