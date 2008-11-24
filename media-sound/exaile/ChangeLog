@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/media-sound/exaile/ChangeLog,v 1.45 2008/05/29 17:15:05 hawking Exp $
 
+  24 Nov 2008; Frédéric Lietart <thelinuxfr@free.fr>
+  -exaile-20081023.ebuild, +exaile-20081121.ebuild:
+  Upstream CVS
+
   24 Oct 2008; Frédéric Lietart <thelinuxfr@free.fr> ChangeLog:
   Version bump.
 
