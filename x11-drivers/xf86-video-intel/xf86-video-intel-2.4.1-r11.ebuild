@@ -20,6 +20,7 @@ DEPEND="${RDEPEND}
 	x11-proto/xextproto
 	x11-proto/xineramaproto
 	x11-proto/xproto
+	=media-libs/mesa-7.0.3
 	dri? ( x11-proto/xf86driproto
 			x11-proto/glproto
 			=x11-libs/libdrm-2.3.0

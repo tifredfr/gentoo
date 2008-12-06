@@ -15,7 +15,8 @@ DEPEND="
 	dev-python/pygtk
 	dev-python/pygobject
 	dev-python/gnome-python
-	x11-misc/xdg-user-dirs"
+	x11-misc/xdg-user-dirs
+	dev-python/pyxdg"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}-${PV}"
