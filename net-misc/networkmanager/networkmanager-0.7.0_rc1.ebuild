@@ -14,7 +14,7 @@ SRC_URI="http://ftp.gnome.org/pub/GNOME/sources/NetworkManager/0.7/${MY_P}-${MY_
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="crypt doc gnome"
 
 
