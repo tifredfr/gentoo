@@ -2,6 +2,9 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/gnome-extra/nm-applet/ChangeLog,v 1.20 2008/08/17 16:15:22 maekke Exp $
 
+  07 Dec 2008; <fred@gentoo.org> ChangeLog:
+  nm-apllet-0.7.0 in portage
+
   04 Nov 2008; Frédéric Lietart <thelinuxfr@free.fr>
   +nm-applet-0.7.0_rc1.ebuild:
   New release candidate
