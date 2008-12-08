@@ -16,15 +16,15 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cddb gnome mp3 spell tellico vorbis"
 
-LANGS="ar bg ca cs de el es fr gl hu id it pl pt ro ru sr sv tr uk"
+LANGS="ar bg ca cs de el es fr gl hu id it nl pl pt ro ru sr sv tr uk"
 for x in ${LANGS} ; do
 	IUSE="${IUSE} linguas_${x}"
 done
 
 DEPEND="dev-lang/perl
-		dev-perl/Archive-Tar
+		virtual/perl-Archive-Tar
 		dev-perl/Archive-Zip
-		dev-perl/Compress-Zlib
+		virtual/perl-Compress-Zlib
 		dev-perl/gtk2-perl
 		dev-perl/HTML-Parser
 		dev-perl/libwww-perl
@@ -32,9 +32,7 @@ DEPEND="dev-lang/perl
 		dev-perl/XML-LibXML
 		dev-perl/XML-Parser
 		dev-perl/XML-Simple
-		dev-perl/Archive-Tar
-		dev-perl/Compress-Zlib
-		dev-perl/Time-Piece
+		virtual/perl-Time-Piece
 		virtual/perl-File-Spec
 		virtual/perl-File-Temp
 		virtual/perl-libnet
@@ -42,8 +40,7 @@ DEPEND="dev-lang/perl
 		gnome? ( dev-perl/gnome2-vfs-perl )
 		mp3? ( dev-perl/MP3-Info dev-perl/MP3-Tag )
 		spell? ( dev-perl/gtk2-spell )
-		tellico? ( dev-perl/Archive-Zip
-			virtual/perl-Digest-MD5
+		tellico? ( virtual/perl-Digest-MD5
 			virtual/perl-MIME-Base64 )
 		vorbis? ( dev-perl/Ogg-Vorbis-Header-PurePerl )"
 RDEPEND="${DEPEND}"
@@ -69,11 +66,9 @@ src_install() {
 	# English version should be always available so we will keep it
 	mv tmp/EN .
 
-	for x in ${LANGS}; do
+	for x in ${LINGUAS}; do
 		# GCstar uses upper-case language names
-		if use linguas_${x} ; then
-			mv tmp/$(echo ${x} | tr '[:lower:]' '[:upper:]') .
-		fi
+		mv tmp/$(echo ${x} | tr '[:lower:]' '[:upper:]') .
 	done
 
 	rm -rf tmp
