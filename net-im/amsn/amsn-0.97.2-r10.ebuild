@@ -38,7 +38,7 @@ src_unpack() {
 src_compile() {
     local myconf
  
-    myconf="${myconf} --with-tcl=/usr/lib/tcl8.5 --with-tk=/usr/lib/tk8.5"
+#    myconf="${myconf} --with-tcl=/usr/lib/tcl8.5 --with-tk=/usr/lib/tk8.5"
 
 	econf \
 		$(use_enable debug) \
