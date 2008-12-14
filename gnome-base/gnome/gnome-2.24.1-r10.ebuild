@@ -153,7 +153,8 @@ RDEPEND="
 
 	mono? ( >=app-misc/tomboy-0.10.2 )
 
-	app-cdr/brasero"
+	app-cdr/brasero
+	>=media-video/cheese-2.24.2"
 
 
 # Broken from assumptions of gnome-vfs headers being included in nautilus headers,
