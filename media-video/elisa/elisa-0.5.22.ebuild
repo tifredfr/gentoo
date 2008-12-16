@@ -22,6 +22,7 @@ RDEPEND=">=dev-lang/python-2.5
 	>=dev-python/imaging-1
 	>=dev-python/twisted-2.2
 	dev-python/twisted-web
+	dev-python/twisted-web2
 	dev-python/pyopenssl
 	dev-python/pygtk
 	dev-python/gnome-python-extras
