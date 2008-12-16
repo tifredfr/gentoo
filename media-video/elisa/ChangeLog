@@ -3,6 +3,9 @@
 # $Header: $
 
   16 Dec 2008; <fred@gentoo.org> ChangeLog:
+  Add dep dev-python/simplejson
+
+  16 Dec 2008; <fred@gentoo.org> ChangeLog:
   Add dep dev-python/twisted-web2
 
   15 Dec 2008; <fred@gentoo.org> ChangeLog:

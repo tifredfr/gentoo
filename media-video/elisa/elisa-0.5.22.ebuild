@@ -39,6 +39,7 @@ RDEPEND=">=dev-lang/python-2.5
 	dev-python/celementtree
 	dev-python/pysqlite
 	dev-python/pycairo
+	dev-python/simplejson
 	dvd? (
 		media-libs/libdvdcss
 		>=media-plugins/gst-plugins-ffmpeg-0.10
