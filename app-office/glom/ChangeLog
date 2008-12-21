@@ -3,6 +3,9 @@
 # $Header: $
 
   21 Dec 2008; <fred@gentoo.org> glom-1.8.4.ebuild:
+  Initial Import. Work
+
+  21 Dec 2008; <fred@gentoo.org> glom-1.8.4.ebuild:
   Fix deps to Postgres-8.3
 
   21 Dec 2008; <fred@gentoo.org> +glom-1.8.4.ebuild:

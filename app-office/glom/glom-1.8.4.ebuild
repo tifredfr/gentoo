@@ -9,7 +9,7 @@ HOMEPAGE="http://www.glom.org"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND=">=dev-cpp/bakery-2.6
