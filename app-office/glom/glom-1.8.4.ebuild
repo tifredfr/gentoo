@@ -22,7 +22,7 @@ DEPEND=">=dev-cpp/bakery-2.6
 	dev-python/gnome-python-extras
 	>=x11-libs/goocanvas-0.12
 	>=x11-libs/goocanvasmm-0.12
-	virtual/postgresql-server
+	>=virtual/postgresql-server-8.3
 	net-libs/libepc"
 #in dev manual RDEPEND said to be removed in future.
 RDEPEND="${DEPEND}" 

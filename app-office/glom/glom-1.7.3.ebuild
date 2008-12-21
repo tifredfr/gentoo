@@ -9,19 +9,19 @@ HOMEPAGE="http://www.glom.org"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS=""
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=">=dev-cpp/bakery-2.4.0
+DEPEND=">=dev-cpp/bakery-2.6
 	>=dev-cpp/libgdamm-3.0.0
 	>=dev-util/intltool-0.35.0
 	dev-util/pkgconfig
 	dev-cpp/libgtksourceviewmm
 	dev-python/pygtk
-	dev-cpp/gtksourceviewmm
 	dev-python/gnome-python-extras
 	x11-libs/goocanvas
 	x11-libs/goocanvasmm
+	net-libs/libepc
 	virtual/postgresql-server"
 #in dev manual RDEPEND said to be removed in future.
 RDEPEND="${DEPEND}" 
