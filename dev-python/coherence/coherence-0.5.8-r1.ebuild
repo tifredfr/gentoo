@@ -13,7 +13,7 @@ SRC_URI="http://coherence.beebits.net/download/${MY_P}.tar.gz"
 IUSE="web gstreamer"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 # dev-python/Louie is supplied inline now
 
