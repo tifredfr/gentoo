@@ -4,6 +4,8 @@
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 
+app-office/glom:client-only - Build with client support only
+
 app-admin/blockhosts:logrotate - Enable logrotate file installation
 app-admin/blockhosts:logwatch - Install support files for logwatch
 app-admin/collectd:hddtemp - Enable monitoring of disk temperatures (app-admin/hddtemp)
