@@ -1,4 +1,4 @@
-# Copyright 1999-2006 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v3
 # $Header: $
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.glom.org"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~x86 ~amd64"
-IUSE=""
+IUSE="client-only"
 
 DEPEND=">=dev-cpp/bakery-2.6
 	>=dev-cpp/libgdamm-3.0.0
@@ -25,6 +25,14 @@ DEPEND=">=dev-cpp/bakery-2.6
 	virtual/postgresql-server"
 #in dev manual RDEPEND said to be removed in future.
 RDEPEND="${DEPEND}" 
+
+
+src_compile() {
+	econf \
+		$(use_enable client-only) || die
+
+	emake || die
+}
 
 pkg_setup() {
 	G2CONF="--with-postgres-utils=/usr/bin/"
