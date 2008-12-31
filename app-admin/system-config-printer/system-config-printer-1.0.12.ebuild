@@ -14,7 +14,15 @@ KEYWORDS="~x86"
 DEPEND="
 	>=dev-python/pycups-1.9.32
 	app-text/xmlto
-	!net-print/gnome-cups-manager"
+	!net-print/gnome-cups-manager
+	net-print/cups
+	dev-lang/python
+	net-print/foomatic-filters
+	net-print/foomatic-db
+	dev-python/pyxml
+	dev-python/notify-python
+	dev-python/dbus-python
+	dev-python/gnome-python"
 
 RDEPEND="${DEPEND}"
 
