@@ -8,7 +8,7 @@ HOMEPAGE="http://ubuntu-tweak.com/"
 SRC_URI="http://ubuntu-tweak.googlecode.com/files/${PN}_${PV}.orig.tar.gz"
 LICENSE="GPL-2"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 SLOT="0"
 
 DEPEND="
