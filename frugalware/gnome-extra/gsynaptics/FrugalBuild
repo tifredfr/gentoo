@@ -1,0 +1,32 @@
+
+# Maintainer: Devil505 <devil505linux@gmail.com>
+# Contributor: bouleetbil <bouleetbil@frogdev.info>
+
+pkgname=gsynaptics
+pkgver=0.9.14
+pkgrel=1
+pkgdesc="A settings tool for Synaptics touchpad driver"
+url="http://gsynaptics.sourceforge.jp/"
+depends=('atk' 'pango' 'freetype2' 'glibc' 'gnome-doc-utils' 'libxau' 'libxdmcp' 'gconf' 'libxdamage' 'libxinerama' 'libxi' 'libxrandr' 'libxcursor' 'libglade')
+makedepends=('intltool' 'gettext')
+_F_gnome_desktop="y"
+Finclude gnome-scriptlet
+groups=('gnome-extra')
+archs=('i686')
+source=("http://globalbase.dl.sourceforge.jp/gsynaptics/29684/$pkgname-$pkgver.tar.gz" build-filename.patch CoastingSpeedThreshold.patch)
+up2date="lynx -dump 'http://sourceforge.jp/projects/gsynaptics/files/' |  grep "/projects/gsynaptics/document/gsynaptics_GSynaptics-"  | cut -d '-' -f 2 | cut -d_ -f1 | head -1"
+sha1sums=('c89575bd37883007820c1184f00c0f0831e4b214' \
+          '1aba0e3407134f3c192693c8e1fd0085666146a7' \
+          '1a5ae829406863b02303f3c728659013c7d8f0d1')
+
+
+build() {
+Fcd
+
+	        Fpatchall
+        Fmake "$@"
+        Fmakeinstall
+
+}
+
+# optimization OK
