@@ -2,28 +2,22 @@
 # Maintainer:
  
 pkgname=wicd
-pkgver=1.5.7
+pkgver=20090102
 pkgrel=1
 pkgdesc="A wired and wireless network manager for Linux"
 
-_F_sourceforge_dirname="wicd"
-Finclude sourceforge
 url="http://wicd.sourceforge.net/"
-purl="http://sourceforge.net/project/showfiles.php?group_id=194573"
 depends=('ethtool' 'dhclient' 'wpa_supplicant' 'pygtk' 'dbus-python')
 groups=('network-extra')
 archs=('i686')
 
 options=('scriptlet')
-_F_gnome_iconcache="y"
-_F_gnome_desktop="y"
-_F_sourceforge_realname="wicd-stable"
-_F_sourceforge_prefix="wicd-"
-Finclude sourceforge gnome-scriptlet
-source=($source rc.wicd)
+_F_scm_type="bzr"
+_F_scm_url="https://code.launchpad.net/~wicd-devel/wicd/trunk"
+Finclude scm
 
+source=(rc.wicd)
 
-up2date="lynx -dump '$purl'|grep -m1 '$pkgname-'|sed 's/.*-\(.*\).tar.gz .*/\1/'" #FIXME
 
 sha1sums=('33d3bd2e1d61f6ded1aee6d167fe56df541ace29' \
           '322e004656dc0b90ab0d58fdf204f93805f64c42')
@@ -31,11 +25,12 @@ sha1sums=('33d3bd2e1d61f6ded1aee6d167fe56df541ace29' \
 
 
 build() {
+	Funpack_scm
+
 	Fcd
 	python ./setup.py configure --no-install-init --autostart --no-install-docs --resume=/usr/share/wicd/scripts/ --suspend=/usr/share/wicd/scripts/ --verbose || Fdie
 	python ./setup.py build || Fdie
 	Fmakeinstall
 	Frcd2 wicd
-	Fbuild_gnome_scriptlet
 }
 
