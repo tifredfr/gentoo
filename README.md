@@ -1,1 +1,1 @@
-discontinued project
+Discontinued project - Repository is read-only
